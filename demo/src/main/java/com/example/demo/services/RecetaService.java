@@ -174,7 +174,7 @@ public class RecetaService {
             .collect(Collectors.groupingBy(ri -> ri.getReceta()))
             .entrySet().stream()
             .filter(entry -> {
-                List<int> idsEnReceta = entry.getValue().stream()
+                List<Integer> idsEnReceta = entry.getValue().stream()
                     .map(ri -> ri.getIngrediente().getId())
                     .collect(Collectors.toList());
 
