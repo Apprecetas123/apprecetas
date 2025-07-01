@@ -166,7 +166,7 @@ public class RecetaService {
         return recetaRepository.findByUsuario(usuario);
     }
 
-    public List<Receta> buscarPorIngredientes(List<Long> ids, boolean incluir) {
+    public List<Receta> buscarPorIngredientes(List<Integer> ids, boolean incluir) {
         List<RecetaIngrediente> relaciones = recetaIngredienteRepository.findAll();
 
 
