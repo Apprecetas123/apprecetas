@@ -165,7 +165,7 @@ public class RecetaController {
 	    try {
 	        Receta receta = recetaService.obtenerRecetaPorId(id);
 
-	        if (!Integer.valueOf(receta.getUsuario().getId()).equals(usuarioId)) {
+	        if (receta.getUsuario().getId() != usuarioId) {
 	            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("No tenés permiso para editar esta receta.");
 	        }
 
